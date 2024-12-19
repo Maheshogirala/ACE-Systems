@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.ResourceBundle;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -16,20 +17,20 @@ import org.testng.annotations.*;
 public class Base3 {
 
 	public static WebDriver dr;
-	
+	public ResourceBundle RB;
 	@BeforeSuite
 	public void url() {
-	
+		RB=ResourceBundle.getBundle("inputdata");
 		dr=new ChromeDriver();
 		dr.get("https://www.acesystems.com/");
 		dr.manage().window().maximize();
 		dr.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
-	@AfterSuite
-	public void closebrowser() {
-		dr.close();
-	}
+//	@AfterSuite
+//	public void closebrowser() {
+//		dr.close();
+//	}
 	
 	
 	public String screenshot(String tname) throws IOException {
