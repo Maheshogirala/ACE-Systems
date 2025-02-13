@@ -58,11 +58,7 @@
     <version>2.20.0</version>
 </dependency>
 
-  	<dependency>
-  		<groupId>PG1</groupId>
-  		<artifactId>PG1</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
+  	
   </dependencies>
   
 </project>
